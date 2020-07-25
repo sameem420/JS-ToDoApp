@@ -1,13 +1,13 @@
-var myListItems = document.getElementById("list");
+var myTodoList = document.getElementById("todoList");
 
 function AddTodoItem() {
-    var listItem = document.getElementById("listItem").value;
+    var todoItem = document.getElementById("todoItem").value;
     var li = document.createElement("li");
-    var itemText = document.createTextNode(listItem);
-    listItem.value = "";
-    li.appendChild(itemText);
-    myListItems.appendChild(li);
+    var todoItemText = document.createTextNode(todoItem);
+    todoItem.value = "";
+    li.appendChild(todoItemText);
+    myTodoList.appendChild(li);
     console.log(listItem);
-    console.log(myListItems);
+    console.log(myTodoList);
 }
 
