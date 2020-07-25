@@ -8,6 +8,6 @@ function AddTodoItem() {
     li.appendChild(itemText);
     myListItems.appendChild(li);
     console.log(listItem);
-    console.log(listItems);
+    console.log(myListItems);
 }
 
