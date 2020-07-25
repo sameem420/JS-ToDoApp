@@ -25,6 +25,10 @@ function deleteTodoItem(event) {
     event.parentNode.remove(this);
 }
 
+function deleteAllTodoItems() {
+    myTodoList.innerHTML = "";
+}
+
 function editTodoItem()
 {
     
