@@ -6,14 +6,17 @@ function AddTodoItem() {
     var todoItemText = document.createTextNode(todoItem);
     var editButton = document.createElement("button");
     var deleteButton = document.createElement("button");
+
     todoItem.value = "";
     editButton.innerText = "Edit";
     editButton.className = "edit";
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
+
     li.appendChild(todoItemText);
     myTodoList.appendChild(li);
-    console.log(listItem);
-    console.log(myTodoList);
+    myTodoList.appendChild(editButton);
+    myTodoList.appendChild(deleteButton);
+
 }
 
