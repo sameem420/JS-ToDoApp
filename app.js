@@ -7,16 +7,26 @@ function AddTodoItem() {
     var editButton = document.createElement("button");
     var deleteButton = document.createElement("button");
 
-    todoItem.value = "";
+    todoItem = "";
     editButton.innerText = "Edit";
     editButton.className = "edit";
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
+    deleteButton.setAttribute("onclick","deleteTodoItem(this)");
 
     li.appendChild(todoItemText);
     myTodoList.appendChild(li);
-    myTodoList.appendChild(editButton);
-    myTodoList.appendChild(deleteButton);
+    li.appendChild(editButton);
+    li.appendChild(deleteButton);
 
+}
+
+function deleteTodoItem(event) {
+    event.parentNode.remove(this);
+}
+
+function editTodoItem()
+{
+    
 }
 
