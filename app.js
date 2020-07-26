@@ -19,7 +19,8 @@ function AddTodoItem() {
         deleteButton.setAttribute("onclick","deleteTodoItem(this)");
         completeButton.innerText = "Completed";
         completeButton.className = "completeBtn";
-        
+        completeButton.setAttribute("onclick","completeTodoItem(this)");
+
         li.appendChild(todoItemText);
         myTodoList.appendChild(li);
         li.appendChild(editButton);
@@ -42,6 +43,9 @@ function deleteAllTodoItems() {
 function editTodoItem(e)
 {
     var editValue = prompt("Enter Value ", e.parentNode.firstChild.nodeValue);
-    e.parentNode.firstChild.nodeValue =  editValue;
-    
+    e.parentNode.firstChild.nodeValue =  editValue;   
+}
+
+function completeTodoItem(e) {
+    e.parentNode.style.textDecoration = 'line-through';
 }
