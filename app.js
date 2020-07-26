@@ -34,19 +34,9 @@ function deleteAllTodoItems() {
 
 function editTodoItem(e)
 {
-    var l = e.parentNode.firstChild.nodeValue;
-    console.log(l);
-
-    var editItem = document.createElement("input");
-    editItem.setAttribute("type", "text");
-    editItem.id = "editInput";
-    li.appendChild(editItem);
-
-    var saveButton = document.createElement("button");
-    saveButton.innerText = "Save";
-    saveButton.className = "save";
-    saveButton.setAttribute("onclick", "saveItem(e)");
-    li.appendChild(saveButton);
+    var val = e.parentNode.firstChild.nodeValue;
+    var editValue = prompt("Enter Value ", val);
+    e.parentNode.firstChild.nodeValue =  editValue;
 }
 
 
