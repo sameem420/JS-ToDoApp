@@ -36,9 +36,10 @@ function editTodoItem(e)
     var l = e.parentElement.childNodes[0];
     //var list = document.getElementsByClassName("tasklist__item").;
     console.log(l.textContent);
-    var todoItem = document.getElementById("todoItem");
-    todoItem.value = l.textContent;
-    
+    var editItem = document.createElement("INPUT");
+    editItem.setAttribute("type", "text");
+    editItem.value = l.textContent;
+
     e.parentElement.childNodes[0] = todoItem.value;
     
 }
