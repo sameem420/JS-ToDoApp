@@ -1,15 +1,17 @@
 var myTodoList = document.getElementById("todoList");
 
 function AddTodoItem() {
-    var todoItem = document.getElementById("todoItem").value;
+    var todoItem = document.getElementById("todoItem");
+    var todoItemValue = todoItem.value;
     var li = document.createElement("li");
-    var todoItemText = document.createTextNode(todoItem);
+    var todoItemText = document.createTextNode(todoItemValue);
     var editButton = document.createElement("button");
     var deleteButton = document.createElement("button");
 
-    todoItem = "";
+    todoItem.value = "";
     editButton.innerText = "Edit";
     editButton.className = "edit";
+    editButton.setAttribute("onclick","editTodoItem(this)");
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
     deleteButton.setAttribute("onclick","deleteTodoItem(this)");
@@ -29,8 +31,15 @@ function deleteAllTodoItems() {
     myTodoList.innerHTML = "";
 }
 
-function editTodoItem()
+function editTodoItem(e)
 {
+    var l = e.parentElement.childNodes[0];
+    //var list = document.getElementsByClassName("tasklist__item").;
+    console.log(l.textContent);
+    var todoItem = document.getElementById("todoItem");
+    todoItem.value = l.textContent;
+    
+    e.parentElement.childNodes[0] = todoItem.value;
     
 }
 
