@@ -13,11 +13,14 @@ function AddTodoItem() {
         todoItem.value = "";
         editButton.innerText = "Edit";
         editButton.className = "editBtn";
+        editButton.id = "edit";
         editButton.setAttribute("onclick","editTodoItem(this)");
         deleteButton.innerText = "Delete";
+        deleteButton.id = "delete";
         deleteButton.className = "deleteBtn";
         deleteButton.setAttribute("onclick","deleteTodoItem(this)");
         completeButton.innerText = "Completed";
+        completeButton.id = "complete"
         completeButton.className = "completeBtn";
         completeButton.setAttribute("onclick","completeTodoItem(this)");
 
@@ -48,4 +51,6 @@ function editTodoItem(e)
 
 function completeTodoItem(e) {
     e.parentNode.style.textDecoration = 'line-through';
+    document.getElementById("edit").disabled = true;
+    document.getElementById("complete").disabled = true;
 }
