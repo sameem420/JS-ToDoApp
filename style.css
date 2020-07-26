@@ -7,13 +7,16 @@
 #main {
     margin: auto;
     text-align: center;
+    border: 1px solid; 
+    width: 600px;
 }
 
 #todoList {
-    text-align: center;
+    margin: 0 auto;
 }
 
 #todoItem {
+    border: 1px solid;
     height: 20px;
     width: 200px;
 }
@@ -23,6 +26,7 @@
     height: 50px;
     border: none;
     width: 100px;
+    margin: 10px;
 }
 
 #clearBtn {
