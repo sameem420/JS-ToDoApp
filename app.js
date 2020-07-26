@@ -34,21 +34,28 @@ function deleteAllTodoItems() {
 
 function editTodoItem(e)
 {
-    var l = e.parentElement.childNodes[0];
-    //var list = document.getElementsByClassName("tasklist__item").;
-    console.log(l.textContent);
+    var l = e.parentNode.firstChild.nodeValue;
+    console.log(l);
 
     var editItem = document.createElement("input");
     editItem.setAttribute("type", "text");
     editItem.id = "editInput";
-    //editItem.value = l.textContent;
     li.appendChild(editItem);
+
     var saveButton = document.createElement("button");
     saveButton.innerText = "Save";
     saveButton.className = "save";
-    saveButton.setAttribute("onclick", "saveItem()");
+    saveButton.setAttribute("onclick", "saveItem(e)");
     li.appendChild(saveButton);
-    
 }
 
 
+function saveItem(e) {
+    var edValue = document.getElementById("editInput");
+    var ed = edValue.value;
+    console.log(e);
+    // var l = ev.parentElement.childNodes[0];
+    edValue.parentNode.firstChild.nodeValue = ed;
+    console.log(edValue);
+    edValue.value = "";
+}
