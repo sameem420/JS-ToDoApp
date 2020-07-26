@@ -8,6 +8,7 @@ function AddTodoItem() {
         var todoItemText = document.createTextNode(todoItemValue);
         var editButton = document.createElement("button");
         var deleteButton = document.createElement("button");
+        var completeButton = document.createElement("button");
 
         todoItem.value = "";
         editButton.innerText = "Edit";
@@ -16,11 +17,14 @@ function AddTodoItem() {
         deleteButton.innerText = "Delete";
         deleteButton.className = "deleteBtn";
         deleteButton.setAttribute("onclick","deleteTodoItem(this)");
-
+        completeButton.innerText = "Completed";
+        completeButton.className = "completeBtn";
+        
         li.appendChild(todoItemText);
         myTodoList.appendChild(li);
         li.appendChild(editButton);
         li.appendChild(deleteButton);
+        li.appendChild(completeButton);
     }
     else {
         alert("Please enter some value to Add!");

@@ -27,6 +27,7 @@
     border: none;
     width: 100px;
     margin: 10px;
+    color: white;
 }
 
 #clearBtn {
@@ -34,6 +35,7 @@
     height: 50px;
     border: none;
     width: 150px;
+    color: white;
 }
 
 .editBtn {
@@ -42,6 +44,7 @@
     border: none;
     width: 150px;
     margin: 10px;
+    color: white;
 }
 
 .deleteBtn {
@@ -50,4 +53,14 @@
     border: none;
     width: 150px;
     margin: 10px;
+    color: white;
+}
+
+.completeBtn {
+    background-color: royalblue;
+    height: 50px;
+    border: none;
+    width: 150px;
+    margin: 10px;
+    color: white;
 }
