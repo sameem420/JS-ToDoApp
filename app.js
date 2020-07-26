@@ -37,7 +37,7 @@ function deleteAllTodoItems() {
 
 function editTodoItem(e)
 {
-    var val = e.parentNode.firstChild.nodeValue;
-    var editValue = prompt("Enter Value ", val);
+    var editValue = prompt("Enter Value ", e.parentNode.firstChild.nodeValue);
     e.parentNode.firstChild.nodeValue =  editValue;
+    
 }
