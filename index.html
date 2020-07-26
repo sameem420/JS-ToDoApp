@@ -9,13 +9,11 @@
 <body>
     <div id="main">
         <input type="text" id="todoItem" placeholder="Enter the Todo...">
-        <button onclick="AddTodoItem()">Add</button>
-
+        <button onclick="AddTodoItem()" id="addBtn">Add</button>
+        <button onclick="deleteAllTodoItems()" id="clearBtn">Clear All Todo's</button>
         <ul id="todoList">
 
         </ul>
-
-        <button onclick="deleteAllTodoItems()">Clear All Todo's</button>
 
     </div>
     <script src="app.js"></script>
