@@ -9,6 +9,10 @@
     text-align: center;
 }
 
+#todoList {
+    text-align: center;
+}
+
 #todoItem {
     height: 20px;
     width: 200px;
@@ -26,4 +30,20 @@
     height: 50px;
     border: none;
     width: 150px;
+}
+
+.editBtn {
+    background-color: lightslategray;
+    height: 50px;
+    border: none;
+    width: 150px;
+    margin: 10px;
+}
+
+.deleteBtn {
+    background-color: red;
+    height: 50px;
+    border: none;
+    width: 150px;
+    margin: 10px;
 }
