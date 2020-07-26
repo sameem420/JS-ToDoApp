@@ -1,9 +1,10 @@
 var myTodoList = document.getElementById("todoList");
+var li = document.createElement("li");
 
 function AddTodoItem() {
     var todoItem = document.getElementById("todoItem");
     var todoItemValue = todoItem.value;
-    var li = document.createElement("li");
+    
     var todoItemText = document.createTextNode(todoItemValue);
     var editButton = document.createElement("button");
     var deleteButton = document.createElement("button");
@@ -36,17 +37,18 @@ function editTodoItem(e)
     var l = e.parentElement.childNodes[0];
     //var list = document.getElementsByClassName("tasklist__item").;
     console.log(l.textContent);
+
     var editItem = document.createElement("input");
     editItem.setAttribute("type", "text");
     editItem.id = "editInput";
-    editItem.value = l.textContent;
-    myTodoList.appendChild(editItem);
+    //editItem.value = l.textContent;
+    li.appendChild(editItem);
     var saveButton = document.createElement("button");
     saveButton.innerText = "Save";
     saveButton.className = "save";
-    saveButton.setAttribute("onclick","saveItem(this)");
-    myTodoList.appendChild(saveButton);
-    e.parentElement.childNodes[0] = todoItem.value;
+    saveButton.setAttribute("onclick", "saveItem()");
+    li.appendChild(saveButton);
     
 }
+
 
