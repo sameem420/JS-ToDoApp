@@ -4,5 +4,20 @@
 }
 
 #todoItem {
-    margin: 0 auto;
+    height: 20px;
+    width: 200px;
+}
+
+#addBtn {
+    background-color: lightgreen;
+    height: 50px;
+    border: none;
+    width: 100px;
+}
+
+#clearBtn {
+    background-color: lightskyblue;
+    height: 50px;
+    border: none;
+    width: 150px;
 }
