@@ -1,10 +1,9 @@
 var myTodoList = document.getElementById("todoList");
-var li = document.createElement("li");
 
 function AddTodoItem() {
     var todoItem = document.getElementById("todoItem");
     var todoItemValue = todoItem.value;
-    
+    var li = document.createElement("li");
     var todoItemText = document.createTextNode(todoItemValue);
     var editButton = document.createElement("button");
     var deleteButton = document.createElement("button");
@@ -37,15 +36,4 @@ function editTodoItem(e)
     var val = e.parentNode.firstChild.nodeValue;
     var editValue = prompt("Enter Value ", val);
     e.parentNode.firstChild.nodeValue =  editValue;
-}
-
-
-function saveItem(e) {
-    var edValue = document.getElementById("editInput");
-    var ed = edValue.value;
-    console.log(e);
-    // var l = ev.parentElement.childNodes[0];
-    edValue.parentNode.firstChild.nodeValue = ed;
-    console.log(edValue);
-    edValue.value = "";
 }
