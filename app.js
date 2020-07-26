@@ -36,10 +36,16 @@ function editTodoItem(e)
     var l = e.parentElement.childNodes[0];
     //var list = document.getElementsByClassName("tasklist__item").;
     console.log(l.textContent);
-    var editItem = document.createElement("INPUT");
+    var editItem = document.createElement("input");
     editItem.setAttribute("type", "text");
+    editItem.id = "editInput";
     editItem.value = l.textContent;
-
+    myTodoList.appendChild(editItem);
+    var saveButton = document.createElement("button");
+    saveButton.innerText = "Save";
+    saveButton.className = "save";
+    saveButton.setAttribute("onclick","saveItem(this)");
+    myTodoList.appendChild(saveButton);
     e.parentElement.childNodes[0] = todoItem.value;
     
 }
