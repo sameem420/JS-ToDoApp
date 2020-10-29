@@ -1,8 +1,7 @@
-# JS-ToDoApp
-ToDo App created in JavaScript (JS)
+# JavaScriptApp-ToDo
 
-DEMO # 1 :-
-https://sameem420.github.io/JS-ToDoApp/
+### ToDo App developed in JavaScript (JS)
 
-DEMO # 2 :-
-https://js-todoapp-12c.web.app/
+
+| [GitHub DEMO](https://sameem420.github.io/JS-ToDoApp/) |[Firebase DEMO](https://js-todoapp-12c.web.app/) |
+| ----- | ----- |
